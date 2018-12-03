@@ -21,7 +21,7 @@ require 'active_record/connection_adapters/postgresql/oid'
 #
 
 
-if ::ActiveRecord::VERSION::MAJOR <= 4
+if ::ActiveRecord::VERSION::MAJOR <= 4 && ::ActiveRecord::VERSION::MINOR <= 2
   OID = ActiveRecord::ConnectionAdapters::PostgreSQLAdapter::OID
 else
   OID = ActiveRecord::ConnectionAdapters::PostgreSQL::OID
